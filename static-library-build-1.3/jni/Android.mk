@@ -39,4 +39,3 @@ LOCAL_MODULE    := opus-share
 #LOCAL_SRC_FILES := libopus.a
 LOCAL_STATIC_LIBRARIES := opus
 include $(BUILD_SHARED_LIBRARY)
-

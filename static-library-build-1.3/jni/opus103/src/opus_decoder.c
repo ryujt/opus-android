@@ -747,7 +747,6 @@ int opus_decode(OpusDecoder *st, const unsigned char *data,
    return opus_decode_native(st, data, len, pcm, frame_size, decode_fec, 0, NULL, 0);
 }
 
-#ifndef DISABLE_FLOAT_API
 int opus_decode_float(OpusDecoder *st, const unsigned char *data,
       opus_int32 len, float *pcm, int frame_size, int decode_fec)
 {
@@ -781,8 +780,6 @@ int opus_decode_float(OpusDecoder *st, const unsigned char *data,
    RESTORE_STACK;
    return ret;
 }
-#endif
-
 
 #else
 int opus_decode(OpusDecoder *st, const unsigned char *data,
